@@ -35,4 +35,10 @@ class Curator
     def find_artist(id)
         artists.find { |artist| artist.id == id }
     end
+
+    def find_by_museum_by_photograph
+    end
+
+    def find_by_artist_by_photograph
+    end
 end
