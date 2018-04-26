@@ -27,4 +27,12 @@ class Curator
         photograph[:id] = @photographs.length + 1
         @photographs << Photograph.new(photograph)
     end
+
+    def find_museum(id)
+        museums.find { |museum| museum.id == id }
+    end
+
+    def find_artist(id)
+        artists.find { |artist| artist.id == id }
+    end
 end
