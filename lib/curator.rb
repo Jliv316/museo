@@ -14,7 +14,17 @@ class Curator
     end
 
     def add_museum(museum)
-        museum[:id] = @museum.length + 1
-        new_museum = Museum.new(museum)
+        museum[:id] = @museums.length + 1
+        @museums << Museum.new(museum)
+    end
+
+    def add_artist(artist)
+        artist[:id] = @artists.length + 1
+        @artists << Artist.new(artist)
+    end
+
+    def add_photograph(photograph)
+        photograph[:id] = @photographs.length + 1
+        @photographs << Photograph.new(photograph)
     end
 end

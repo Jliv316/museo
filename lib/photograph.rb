@@ -5,7 +5,7 @@ class Photograph
                 :museum_id,
                 :year
     def initialize(info)
-        @id = 1
+        @id = info[:id]
         @name = info[:name]
         @artist_id = info[:artist_id]
         @museum_id = info[:museum_id]
