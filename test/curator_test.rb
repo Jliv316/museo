@@ -60,9 +60,9 @@ class CuratorTest < Minitest::Test
         @curator.add_museum({name: "Metropolitan Museum of Art"})
         @curator.add_artist({name: "Diane Arbus", born: 1923, died: 1971, country: "United States"})
         @curator.add_photograph({name: "Identical Twins, Roselle, New Jersey", artist_id: 1, museum_id: 1, year: 1967})
-        photograph = curator.photographs.first
+        photograph = @curator.photographs.first
 
-        museum = curator.find_museum_by_photograph(photograph)
+        museum = @curator.find_museum_by_photograph(photograph)
 
         assert_instance_of Museum, museum
         assert_equal 1, museum.id
@@ -73,9 +73,9 @@ class CuratorTest < Minitest::Test
         @curator.add_museum({name: "Metropolitan Museum of Art"})
         @curator.add_artist({name: "Diane Arbus", born: 1923, died: 1971, country: "United States"})
         @curator.add_photograph({name: "Identical Twins, Roselle, New Jersey", artist_id: 1, museum_id: 1, year: 1967})
-        photograph = curator.photographs.first
+        photograph = @curator.photographs.first
 
-        artist = curator.find_artist_by_photograph(photograph)
+        artist = @curator.find_artist_by_photograph(photograph)
 
         assert_instance_of Artist, artist
         assert_equal 1, artist.id
